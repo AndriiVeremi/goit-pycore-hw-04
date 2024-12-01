@@ -9,10 +9,10 @@ def view_directory(directory, indent=0):
     
     for x in p.iterdir():
         if x.is_dir():
-            print(Fore.BLUE, " " * indent, "📂 Folder --> " + str(x))
+            print(Fore.BLUE, " " * indent, "📂 Folder --> " + str(x) + Style.RESET_ALL)
             view_directory(x, indent + 2)
         elif x.is_file():
-            print(Fore.YELLOW, " " * indent, "📄 File --> " + str(x))
+            print(Fore.YELLOW, " " * indent, "📄 File --> " + str(x) + Style.RESET_ALL)
 
 
 if __name__ == "__main__":
